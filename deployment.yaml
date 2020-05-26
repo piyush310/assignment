@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: complaint
+  name: application
   labels:
-    app: complaint
+    app: application
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: complaint
+      app: application
   template:
     metadata:
       labels:
-        app: complaint
+        app: application
     spec:
       containers:
-        - name: complaint
+        - name: application
           image: #
           ports:
             - containerPort: 5000
@@ -27,10 +27,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: complaint
+  name: application
 spec:
   selector:
-    app: complaint
+    app: application
   type: LoadBalancer
   ports:
     - protocol: TCP

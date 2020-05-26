@@ -1,10 +1,10 @@
 FROM python:3.7
 
 #install python module 
-COPY . /complaint
+COPY . /application
 
 
-WORKDIR /complaint
+WORKDIR /application
 
 #install dependency
 RUN pip install --no-cache-dir -r requirements.txt
