@@ -13,7 +13,7 @@ A small website reporting stolen cars
 ```
 1. Get inside the application directory. 
 2. Run this command: pip install --no-cache-dir -r requirements.txt
-3.Run: python main.py
+3. Run: python main.py
 ```
 * Method 2
 ```
