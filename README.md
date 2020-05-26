@@ -19,12 +19,13 @@ A small website reporting stolen cars
 ```
 1. Run this command: docker pull piyush7248/complaint:1
 2. Now: docker run -p 5000:5000 -it complaint:1
+3. Docker must be install in your system.
 ```
 * Method 3
 ```
 1. Move to the directory where deployment.yaml file located.
 2. Run: kubectl create -f deployment.yaml
-3. Kubernetes cluster step will be there to run this.
+3. Kubernetes cluster will required to step.
 ```
 ## Documentation
 
