@@ -16,13 +16,18 @@ body{
 {%endblock%}
 
 {% block content %}
-<div style=" margin-top: 0px; height: 700px; width: 100%; background-color:rgb(62,61,64); color: rgb(247,246,255);">
+<div style=" margin-top: 0px; height: 800px; width: 100%; background-color:rgb(62,61,64); color: rgb(247,246,255);">
   <div style="padding: 110px 0 0 150px ">
     <h1 style="font-size: 100px;"> CAR COMPLAINT PORTAL</h1>
     <p style="padding-top: 50px; font-size:37px;">A platform where anyone can post complaints.</p>
     <div style="padding-top:50px;">
       <a href="{{url_for('.complaint')}}" style="color:rgb(59,57,64)"><button style="width: 440px; height:80px; background-color:rgb(247,246,255); border-radius: 10px; font-size: 30px">Post a complaint </button></a>
+      <br>
+      <br>
       <a href="{{url_for('.login')}}" style="color:rgb(59,57,64)"><button style="width: 440px; height:80px; background-color:rgb(247,246,255); border-radius: 10px; font-size: 30px;">Police admin Login</button></a>
+      <br>
+      <br>
+      <a href="{{url_for('.status')}}" style="color:rgb(59,57,64)"><button style="width: 440px; height:80px; background-color:rgb(247,246,255); border-radius: 10px; font-size: 30px;">Current Status</button></a>
     </div>
 
   </div>

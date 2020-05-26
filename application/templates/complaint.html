@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
+  <h2 style="text-align: center;font-size: 50px;font-family: 'Fjalla One', sans-serif;">Enter the details</h2>
+  <hr>
   {% for message in get_flashed_messages() %}
   <div class="alert alert-warning" style="background-color:rgb(62,61,64); color: rgb(247,246,255)">
     <button type="button" class="close" style="color: rgb(247,246,255" data-dismiss="alert">&times;</button>
