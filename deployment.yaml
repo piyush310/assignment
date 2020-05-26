@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: complaint
+  labels:
+    app: complaint
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: complaint
+  template:
+    metadata:
+      labels:
+        app: complaint
+    spec:
+      containers:
+        - name: complaint
+          image: #
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              memory: 800Mi
+              cpu: 150m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: complaint
+spec:
+  selector:
+    app: complaint
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+      nodePort: 30000 

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<hr>
+<div class="container">
+  <h2>Complaint List</h2>
+  <br>
+  <ul class="list-group">
+    {% for post in posts %}
+    <div style="color: rgb(247,246,255)">
+      <li class="list-group-item d-flex justify-content-start align-items-center" style="background-color:rgb(62,61,64)">
+      {{"SN0.- "}}{{post.id}}
+      <br>
+      {{"Name- "}}{{post.name}}
+      <br>
+      {{"Address- "}}{{post.address}}
+      <br>
+      {{"Email- "}}{{post.email}}
+      <br>
+      {{"Phone- "}}{{post.phone}}
+      <br>
+      {{"Complaint- "}}{{post.body}}
+      <span class="badge badge-primary badge-pill">{{ moment(post.timestamp).fromNow() }}</span>
+      {% if role == 'admin' %}
+      <hr>
+      <a href="{{ url_for('.delete', id=post.id, role = role)}}" style="color: rgb(62,61,64);"><button type="button" class="btn btn-dark btn-sm text-white" style="font-size:15px;">Done</button></a>
+      {% endif %}
+      </li>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
